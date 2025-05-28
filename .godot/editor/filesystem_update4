@@ -11,3 +11,6 @@ res://gun.gd
 res://bullet.gd
 res://bullet.tscn
 res://survivors_game.gd
+res://hud.gd
+res://hud.tscn
+res://score.gd

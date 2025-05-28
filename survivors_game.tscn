@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b7x6y7ff3bamu"]
+[gd_scene load_steps=6 format=3 uid="uid://b7x6y7ff3bamu"]
 
 [ext_resource type="Script" uid="uid://b8gpsvenxjyhi" path="res://survivors_game.gd" id="1_l26od"]
-[ext_resource type="PackedScene" uid="uid://biuwg3p4q4q6o" path="res://player.tscn" id="1_y3pti"]
+[ext_resource type="PackedScene" uid="uid://dsw8raqgacxsc" path="res://player.tscn" id="1_y3pti"]
 [ext_resource type="PackedScene" uid="uid://bbppxlnc3byrx" path="res://pine_tree.tscn" id="2_l26od"]
+[ext_resource type="Script" uid="uid://bg1ng3ihkwgus" path="res://score.gd" id="2_qqaft"]
 
 [sub_resource type="Curve2D" id="Curve2D_qqaft"]
 _data = {
@@ -23,8 +24,19 @@ offset_top = 6.0
 offset_right = 1963.0
 offset_bottom = 1110.0
 
+[node name="Score" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 33.0
+offset_top = 8.0
+offset_right = 446.0
+offset_bottom = 232.0
+theme_override_colors/font_color = Color(0, 0, 0.929412, 1)
+theme_override_font_sizes/font_size = 80
+text = "Score: 0"
+script = ExtResource("2_qqaft")
+
 [node name="Player" parent="." instance=ExtResource("1_y3pti")]
-position = Vector2(698, 598)
+position = Vector2(598, 594)
 
 [node name="Path2D" type="Path2D" parent="Player"]
 position = Vector2(-698, -598)
