@@ -16,16 +16,11 @@ y_sort_enabled = true
 script = ExtResource("1_l26od")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = -30
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-offset_left = 13.0
-offset_top = 6.0
-offset_right = 1963.0
-offset_bottom = 1110.0
+layer = -1
 
 [node name="Score" type="Label" parent="CanvasLayer"]
 unique_name_in_owner = true
+z_index = 1
 offset_left = 33.0
 offset_top = 8.0
 offset_right = 446.0
@@ -34,6 +29,13 @@ theme_override_colors/font_color = Color(0, 0, 0.929412, 1)
 theme_override_font_sizes/font_size = 80
 text = "Score: 0"
 script = ExtResource("2_qqaft")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_left = 13.0
+offset_top = 6.0
+offset_right = 1963.0
+offset_bottom = 1110.0
+color = Color(0.780392, 1, 1, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_y3pti")]
 position = Vector2(598, 594)
@@ -97,6 +99,24 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0.933333, 0, 0, 1)
 theme_override_font_sizes/font_size = 200
 text = "Game Over!"
+
+[node name="PineTree7" parent="." instance=ExtResource("2_l26od")]
+position = Vector2(1387, 901)
+
+[node name="PineTree8" parent="." instance=ExtResource("2_l26od")]
+position = Vector2(123, 948)
+
+[node name="PineTree9" parent="." instance=ExtResource("2_l26od")]
+position = Vector2(700, 989)
+
+[node name="PineTree10" parent="." instance=ExtResource("2_l26od")]
+position = Vector2(1711, 785)
+
+[node name="PineTree11" parent="." instance=ExtResource("2_l26od")]
+position = Vector2(223, 261)
+
+[node name="PineTree12" parent="." instance=ExtResource("2_l26od")]
+position = Vector2(533, 189)
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
